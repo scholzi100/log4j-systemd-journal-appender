@@ -5,6 +5,7 @@ import static org.mockito.Mockito.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.bwaldvogel.log4j.jna.SystemdJournalLibrary;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.ThreadContext;
 import org.apache.logging.log4j.core.LogEvent;
@@ -74,7 +75,7 @@ public class SystemdJournalAppenderTest {
         expectedArgs.add("CODE_FUNC=%s");
         expectedArgs.add("testAppend_LogSource");
         expectedArgs.add("CODE_LINE=%d");
-        expectedArgs.add(Integer.valueOf(66));
+        expectedArgs.add(Integer.valueOf(67));
         expectedArgs.add(null);
 
         verify(journalLibrary).sd_journal_send("MESSAGE=%s", expectedArgs.toArray());

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.bwaldvogel.log4j;
+package de.bwaldvogel.log4j.jna;
 
 import com.sun.jna.Library;
 

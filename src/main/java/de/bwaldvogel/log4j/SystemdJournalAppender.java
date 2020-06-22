@@ -1,6 +1,7 @@
 package de.bwaldvogel.log4j;
 
 import com.sun.jna.Native;
+import de.bwaldvogel.log4j.jna.SystemdJournalLibrary;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.Filter;
 import org.apache.logging.log4j.core.Layout;
@@ -20,7 +21,6 @@ import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 
 @Plugin(name = "SystemdJournal", category = "Core", elementType = "appender", printObject = true)
