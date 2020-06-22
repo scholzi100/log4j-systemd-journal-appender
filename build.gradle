@@ -17,7 +17,6 @@ sourceCompatibility = 11
 targetCompatibility = 11
 
 compileJava.options.encoding = 'UTF-8'
-compileJava.modularity.inferModulePath.set(true)
 
 ext {
     title = 'log4j-systemd-journal-appender'
@@ -39,6 +38,10 @@ task sourceJar(type: Jar) {
 task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier = "javadoc"
     from javadoc.destinationDir
+}
+
+java{
+    modularity.inferModulePath.set(true)
 }
 
 publishing {
